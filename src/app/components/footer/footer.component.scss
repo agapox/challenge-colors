@@ -10,6 +10,7 @@
 
   p {
     margin: 0 auto;
+    font-size: 14px;
   }
 
   a {
@@ -24,6 +25,10 @@
     color: red;
     margin: 0 4px;
     animation: heartAnimation 5s ease 0s infinite normal forwards;
+  }
+
+  .fas, .fab {
+    font-size: 16px;
   }
 
   .fab {

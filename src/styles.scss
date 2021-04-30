@@ -75,32 +75,5 @@ h1, h2, h3, h4, h5, h6, p, span {
       }
     }
   }
-
-  &-next {
-    &:after {
-      content: '\003E';
-      padding-left: 4px;
-      font-size: 18px;
-      transition: transform .250s ease-out;
-      @media screen and (max-width: $breakpoint_sm) {
-        padding-left: 0;
-      }
-    }
-  }
-
-  &-previous {
-    &:hover {
-      &:before {
-        transform: translate3d(-5px, 0, 0);
-      }
-    }
-  }
-  &-next {
-    &:hover {
-      &:after {
-        transform: translate3d(5px, 0, 0);
-      }
-    }
-  }
 }
 

@@ -1,5 +1,9 @@
 # Colors Palette Challenge
 
+##### Challenge deployed on Netlify
+
+[https://musing-mcnulty-17f1ba.netlify.app/](https://musing-mcnulty-17f1ba.netlify.app/)
+
 ### Single page aplication created with Angular
 &nbsp;
 ## Challenge description

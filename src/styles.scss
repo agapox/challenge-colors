@@ -2,12 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
 }
 
 body, div {
-  box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
 }
@@ -38,3 +41,66 @@ h1, h2, h3, h4, h5, h6, p, span {
     grid-template-rows: repeat(6, 1fr);
   }
 }
+
+.btn {
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 20px;
+  color: $color_primary;
+  border: 2px solid $color_primary;
+  border-radius: 200px;
+  background-color: transparent;
+  transition: background-color .177s ease-in-out, color .177s ease-in-out;
+
+  @media screen and (max-width: $breakpoint_sm) {
+    font-size: 12px;
+    padding: 1px 16px 1px;
+  }
+
+  &:hover, &:focus {
+    background-color: $color_primary;
+    color: #ffffff;
+  }
+
+  &-previous {
+    &:before {
+      content: '\003C';
+      padding-right: 4px;
+      font-size: 18px;
+      transform: translate3d(0, 0, 0);
+      transition: transform .250s ease-out;
+      @media screen and (max-width: $breakpoint_sm) {
+        padding-right: 0;
+      }
+    }
+  }
+
+  &-next {
+    &:after {
+      content: '\003E';
+      padding-left: 4px;
+      font-size: 18px;
+      transition: transform .250s ease-out;
+      @media screen and (max-width: $breakpoint_sm) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &-previous {
+    &:hover {
+      &:before {
+        transform: translate3d(-5px, 0, 0);
+      }
+    }
+  }
+  &-next {
+    &:hover {
+      &:after {
+        transform: translate3d(5px, 0, 0);
+      }
+    }
+  }
+}
+

@@ -1,0 +1,43 @@
+@import '../../../assets/styles/';
+
+:host {
+  $padding_header: 2rem;
+  $padding_header_sm: 1rem;
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: $header_height;
+  justify-content: space-between;
+  align-content: center;
+  padding-left: $padding_header;
+  padding-right: $padding_header;
+
+  @media screen and (max-width: $breakpoint_sm) {
+    padding-left: $padding_header_sm;
+    padding-right: $padding_header_sm;
+  }
+
+  .title {
+    color: $color_primary;
+  }
+
+  .title, .btn {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .btn {
+    span {
+      @media screen and (max-width: $breakpoint_sm) {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 auto;
+  }
+}

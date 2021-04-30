@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ColorCardComponent } from './components/color-card/color-card.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColorCardComponent
+    ColorCardComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

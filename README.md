@@ -15,8 +15,8 @@
     * Explain how to install the dependencies and run the project.
     * Provide a production `URL` if it's the case.
 * Implement the use of the `API` endpoint to get the colors and pagination.
-* Reproduce the grid design with the provided colors (see wireframe 1).
-* When a color is clicked copy the color code to the user clipboard :clipboard: (see wireframe 2).
+* Reproduce the grid design with the provided colors (see [wireframe 1](https://github.com/agapox/challenge-colors/tree/master/src/assets/images/wireframe-colores-1.png)).
+* When a color is clicked copy the color code to the user clipboard :clipboard: (see [wireframe 2](https://github.com/agapox/challenge-colors/tree/master/src/assets/images/wireframe-colores-2.png)).
 * Show the data provided on the `API` response:
     * Name
     * Year

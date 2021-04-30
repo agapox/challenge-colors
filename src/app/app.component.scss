@@ -1,6 +1,8 @@
+@import '../assets/styles/';
+
 :host {
   display: grid;
-  min-height: 100vh;
+  min-height: calc(100vh - #{$header_height + $footer_height});
 
   .container {
     min-height: inherit;

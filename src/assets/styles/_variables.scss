@@ -1,5 +1,10 @@
 // COLORS
-$color_primary: #443956;
+$color_light: #ffffff;
+$color_purple: #443956;
+$color_darkpurple: #0f0819;
+$color_darkpurple-contrast: #694e8f;
+
+$color_primary: $color_purple;
 
 // MEDIA BREAKPOINTS
 $breakpoint_xs: 360px;

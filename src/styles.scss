@@ -58,6 +58,10 @@ h1, h2, h3, h4, h5, h6, p, span {
     padding: 1px 16px 1px;
   }
 
+  &[disabled] {
+    opacity: .4;
+  }
+
   &:hover, &:focus {
     background-color: $color_primary;
     color: #ffffff;

@@ -63,6 +63,15 @@
           color: #ffffff;
         }
       }
+      &[disabled] {
+        &:hover, &:focus, &:active {
+          background-color: transparent;
+          color: $color_primary;
+          &:before {
+            transform: none;
+          }
+        }
+      }
     }
     &-next {
       &:hover {
@@ -81,6 +90,15 @@
         &:focus, &:active {
           background-color: $color_primary;
           color: #ffffff;
+        }
+      }
+      &[disabled] {
+        &:hover, &:focus, &:active {
+          background-color: transparent;
+          color: $color_primary;
+          &:after {
+            transform: none;
+          }
         }
       }
     }

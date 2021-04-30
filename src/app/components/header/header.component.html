@@ -1,13 +1,21 @@
-<a class="btn btn-previous">
+<button
+  *ngIf="currentPage"
+  class="btn btn-previous"
+  [disabled]="disabledPrevBtn"
+  (click)="handleChangePage('prev')">
   <span>
     Anterior
   </span>
-</a>
+</button>
 
 <p class="title">{{ title }}</p>
 
-<a class="btn btn-next">
+<button
+  *ngIf="currentPage"
+  class="btn btn-next"
+  [disabled]="disabledNextBtn"
+  (click)="handleChangePage('next')">
   <span>
     Siguiente
   </span>
-</a>
+</button>

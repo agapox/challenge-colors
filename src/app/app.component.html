@@ -1,11 +1,20 @@
-<app-header></app-header>
+<app-header
+  [currentPage]="currentPage"
+  [totalPages]="totalPages"
+  (changePageEv)="changePage($event)">
+</app-header>
 <div class="container">
-  <div class="row">
-    <app-color-card
-      [style]="{backgroundColor: color.color}"
-      *ngFor="let color of colors"
-      [color]="color">
-    </app-color-card>
+  <div class="row" [ngClass]="{'loading': loading}">
+    <ng-container *ngIf="!loading">
+      <app-color-card
+        [style]="{backgroundColor: color.color}"
+        *ngFor="let color of colors"
+        [color]="color">
+      </app-color-card>
+    </ng-container>
+    <ng-container *ngIf="loading">
+      <app-loading></app-loading>
+    </ng-container>
   </div>
 </div>
 

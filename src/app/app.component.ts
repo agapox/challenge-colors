@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, OnChanges, OnInit, SimpleChange } from '@angular/core';
 import { Color, ColorsHttp } from './interfaces/colors.interface';
 import { ColorService } from './services/color.service';
 
@@ -10,6 +9,7 @@ import { ColorService } from './services/color.service';
 })
 export class AppComponent implements OnInit {
 
+  public loading: boolean = true;
   public colorsHttp: ColorsHttp = {
     page: 0,
     per_page: 0,
@@ -21,29 +21,44 @@ export class AppComponent implements OnInit {
       text: ''
     }
   };
+
   public colors: Color[] = [];
+
+  public currentPage: number = 0;
+  public totalPages: number = 0;
 
   constructor(
     private colorService: ColorService
   ) { }
 
   ngOnInit() {
-    this.getColors().subscribe(data => {
-      this.colorsHttp = data;
-      this.colors = data.data;
-    });
-
+    this.getColors();
   }
 
-  getColors(): Observable<ColorsHttp> {
-    return this.colorService.getColors();
+  getColors(page?: number): void {
+    page = page ? page : 1;
+    this.setLoading();
+    setTimeout(() => {
+      this.colorService.getColors(page).subscribe(data => {
+        this.currentPage = data.page;
+        this.totalPages = data.total_pages;
+        this.colorsHttp = data;
+        this.colors = data.data;
+        this.setLoading(false);
+      });
+    }, 600);
   }
 
-  nextPage() {
-
+  changePage(ev: string) {
+    console.log('changePage app', ev);
+    if (ev === 'next') {
+      this.getColors(this.colorsHttp.page + 1)
+    } else {
+      this.getColors(this.colorsHttp.page - 1)
+    }
   }
 
-  previusPage() {
-
+  setLoading(state: boolean = true) {
+    this.loading = state;
   }
 }

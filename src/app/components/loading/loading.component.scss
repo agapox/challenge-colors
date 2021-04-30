@@ -1,0 +1,12 @@
+@import '../../../assets/styles/';
+
+:host {
+  display: grid;
+
+  svg {
+    @media screen and (max-width: $breakpoint_sm) {
+      width: 130px;
+      height: 130px;
+    }
+  }
+}

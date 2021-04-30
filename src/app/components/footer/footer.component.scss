@@ -8,6 +8,10 @@
   background-color: $color_darkpurple;
   color: #ffffff;
 
+  @media screen and (max-width: $breakpoint_sm) {
+    height: $footer_height_sm;
+  }
+
   p {
     margin: 0 auto;
     font-size: 14px;
@@ -29,6 +33,14 @@
 
   .fas, .fab {
     font-size: 16px;
+  }
+
+  @media screen and (max-width: $breakpoint_sm) {
+    span {
+      display: block;
+      text-align: center;
+      margin-top: 4px;
+    }
   }
 
   .fab {

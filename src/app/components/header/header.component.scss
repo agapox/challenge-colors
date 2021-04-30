@@ -1,6 +1,7 @@
 @import '../../../assets/styles/';
 
 :host {
+  background-color: $color_light;
   $padding_header: 2rem;
   $padding_header_sm: 1rem;
   display: flex;

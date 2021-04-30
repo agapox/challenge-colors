@@ -4,12 +4,22 @@
   display: grid;
   min-height: calc(100vh - #{$header_height + $footer_height});
 
+  @media screen and (max-width: $breakpoint_sm) {
+    min-height: calc(100vh - #{$header_height + $footer_height_sm});
+  }
+
   .container {
     min-height: inherit;
+    background-color: $color_darkpurple;
   }
 
   .row {
     min-height: inherit;
+
+    &.loading {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
   }
 
 }

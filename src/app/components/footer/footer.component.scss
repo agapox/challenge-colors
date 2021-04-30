@@ -1,0 +1,83 @@
+@import '../../../assets/styles/';
+
+:host {
+  display: flex;
+  width: 100%;
+  height: $footer_height;
+  align-items: center;
+  background-color: #0f0819;
+  color: #ffffff;
+
+  p {
+    margin: 0 auto;
+  }
+
+  a {
+    color: #ffffff;
+
+    &:hover, &:focus {
+      color: $color_primary;
+    }
+  }
+
+  .heart-icon {
+    color: red;
+    margin: 0 4px;
+    animation: heartAnimation 5s ease 0s infinite normal forwards;
+  }
+
+  .fab {
+    background-color: #ffffff;
+    padding: 2px 4px;
+    border-radius: 1px;
+    margin: 1px 4px 0;
+  }
+  .fa-angular {
+    color: #dd0031;
+
+  }
+  .fa-html5 {
+    color: #dd4b25;
+  }
+  .fa-css3-alt {
+    color: #254bdd;
+  }
+  .fa-sass {
+    color: #ce6b9e;
+  }
+  .fa-js-square {
+    color: #b09f0f;
+  }
+
+  @keyframes heartAnimation {
+    0%{
+        transform: scale3d(1);
+        color: red;
+    }
+    15%{
+        transform: scale(1);
+        color: red;
+    }
+    20%{
+        transform: scale(1.1);
+        color: #ff0080;
+    }
+    25%{
+        transform: scale(1.05);
+        color: #ff0080;
+    }
+    30%{
+        transform: scale(1.1);
+        color: #ff0080;
+    }
+    35%{
+        transform: scale(1);
+        color: #ff0080;
+    }
+    100%{
+        transform: scale(1);
+        color: red;
+    }
+  }
+
+}

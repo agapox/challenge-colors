@@ -1,9 +1,8 @@
-@import '../../../assets/styles/';
+@import "../../../assets/styles/";
 
 :host {
   $padding_card: 2rem;
   $padding_card_sm: 1rem;
-
 
   display: flex;
   width: 100%;
@@ -25,6 +24,12 @@
     margin: 0;
     display: flex;
     font-size: 20px;
+  }
+
+  a {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>📋</text></svg>")
+        16 16,
+      auto;
   }
 
   .color-card {
@@ -58,6 +63,40 @@
       @media screen and (max-width: $breakpoint_sm) {
         bottom: $padding_card_sm;
         right: $padding_card_sm;
+      }
+    }
+
+    &__msg {
+      visibility: hidden;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 12px 24px 16px;
+      position: absolute;
+      z-index: 1;
+      justify-content: center;
+      margin-top: 150px;
+      opacity: 0;
+
+      &.show {
+        animation: showHideAnim 1.3s ease-out;
+        visibility: visible;
+      }
+
+      @keyframes showHideAnim {
+        0% {
+          opacity: 0;
+        }
+        25% {
+          opacity: 1;
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
       }
     }
   }

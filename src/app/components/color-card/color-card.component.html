@@ -1,4 +1,9 @@
 <p class="color-card__year">{{ color.year }}</p>
 <p class="color-card__name">{{ color.name }}</p>
-<p class="color-card__code">{{ color.color }}</p>
+<p class="color-card__code">
+  <a (click)="handleColorSelected($event, color.color)">
+    {{ color.color }}
+  </a>
+</p>
 <p class="color-card__pantone">{{ color.pantone_value }}</p>
+<p class="color-card__msg" [ngClass]="{'show': copyMsg}">Copiado 📋</p>

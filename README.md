@@ -1,15 +1,14 @@
 # Colors Palette Challenge
 
-### Single page aplication created with Angular for
+### Single page aplication created with Angular
 &nbsp;
 ## Challenge description
----
+
 
 ##### Create a webapp that shows the color palette of a company, to provide all the teams a better and unified way of getting the oficial branding colors of the company.
 &nbsp;
 
 ## :+1: Requirements
----
 * A good README.md :ok_hand:
     * Breif introduction of the app.
     * A list of technologies and frameworks used in the project.
@@ -17,7 +16,7 @@
     * Provide a production `URL` if it's the case.
 * Implement the use of the `API` endpoint to get the colors and pagination.
 * Reproduce the grid design with the provided colors (see wireframe 1).
-* When a color is clicked copy the color code to the user clipboard (see wireframe 2). :clipboard:
+* When a color is clicked copy the color code to the user clipboard :clipboard: (see wireframe 2).
 * Show the data provided on the `API` response:
     * Name
     * Year
@@ -26,7 +25,7 @@
 
 &nbsp;
 ## :metal: Extra points
----
+
 * Use a frontend framework of choice for the proyect.
 * Modularize the components in a proper order and with it's CSS.
 * Use of flexbox for the grid.
